@@ -2,8 +2,7 @@
 
 
 
-
-# [How to use:]
+# [How to use](https://github.com/Faster-than-File-Explorer/ffe/)
 
 1. Run the ffe_IC.py script in cmd
 
