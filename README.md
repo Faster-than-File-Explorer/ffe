@@ -1,9 +1,9 @@
 # FFE
-# An explorer that can SEARCH!!
 
 
 
-# How to use:
+
+[# How to use:]
 
 1. Run the ffe_IC.py script in cmd
 
