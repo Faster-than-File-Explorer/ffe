@@ -127,6 +127,38 @@ def advanced_search_main():
 
 
             
+def SortDir(directory):
+    files = get_files(directory)
+    for eye in range(len(files)):
+        try:
+            filext = os.path.splitext(files[eye])
+            if sys.platform == "win32":
+                os.mkdir(directory + "\\" + filext[1].replace(".", ""))
+
+              
+                shutil.move(directory + "\\" + files[eye], directory + "\\" + filext[1].replace(".", "") + "\\" + files[eye])
+                
+            else:
+                os.mkdir(directory + "/" + filext[1].replace(".", ""))
+
+                
+                shutil.move(directory + "/" + files[eye], directory + "/" + filext[1].replace(".", "") + "/" + files[eye])
+                
+        except:
+            filext = os.path.splitext(files[eye])
+            if sys.platform == "win32":
+               
+                
+                shutil.move(directory + "\\" + files[eye], directory + "\\" + filext[1].replace(".", "") + "\\" + files[eye])
+                
+            else:
+                
+
+                
+                shutil.move(directory + "/" + files[eye], directory + "/" + filext[1].replace(".", "") + "/" + files[eye])
+                
+        eye+=1
+
 
            
 def get_dirs(directory):
@@ -296,7 +328,8 @@ def mymain():
             print("open file ( opens file )")
             print()
             print("edit file ( edits file contents )")
-            
+            print()
+            print("sort dir")
             print()
             print("exit")
             print()
@@ -322,6 +355,10 @@ def mymain():
 
         elif cmd == "search my user":
             advanced_search_main()
+
+        elif cmd == "sort dir":
+            direco = input("dir to sort: ")
+            SortDir(direco)
         else:
             print("command not found")
 
