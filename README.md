@@ -41,7 +41,9 @@ this command:
     sorts the directory you typed in
     sorts all files in folders relating to their filetype
     (Some bug to be fixed in this command...)
-    
+   
+   
+9: delete dir (deletes directory)
 
 
 # HAPPY SEARCHING!!!!
