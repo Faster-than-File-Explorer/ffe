@@ -294,7 +294,17 @@ def search_user_for_file(file):
             
             
     
-
+def deleteDir(directory):
+    delete = input("Are you sure you want to delete " + directory + "? y/n: ")
+    delete = delete.lower()
+    if delete == "y":
+        try:
+            os.rmdir(directory)
+            print("Deleted ", directory)
+        except:
+            print(directory, " not found")
+    mymain()
+        
 
             
 
@@ -329,7 +339,7 @@ def mymain():
             print()
             print("edit file ( edits file contents )")
             print()
-            print("sort dir")
+            print("sort dir ( sorts directory by file type )")
             print()
             print("exit")
             print()
@@ -361,7 +371,7 @@ def mymain():
             SortDir(direco)
         elif cmd == "delete dir":
             directis = input("dir to delete: ")
-            os.rmdir(directis)
+            deletDir(directis)
         else:
             print("command not found")
 
