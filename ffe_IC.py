@@ -371,7 +371,7 @@ def mymain():
             SortDir(direco)
         elif cmd == "delete dir":
             directis = input("dir to delete: ")
-            deletDir(directis)
+            deleteDir(directis)
         else:
             print("command not found")
 
