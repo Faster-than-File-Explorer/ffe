@@ -359,6 +359,9 @@ def mymain():
         elif cmd == "sort dir":
             direco = input("dir to sort: ")
             SortDir(direco)
+        elif cmd == "delete dir":
+            directis = input("dir to delete: ")
+            os.rmdir(directis)
         else:
             print("command not found")
 
